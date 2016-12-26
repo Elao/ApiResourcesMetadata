@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+        http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="elao.api_resources_metadata.resource_index"
+                 class="Elao\ApiResourcesMetadata\Resource\ResourceIndex"
+        >
+            <argument type="collection"> <!-- Resources locators -->
+                <argument type="service" id="elao.api_resources_metadata.yaml_file_locator" on-invalid="ignore" />
+                <argument type="service" id="elao.api_resources_metadata.array_locator" />
+            </argument>
+            <argument type="service" id="elao.api_resources_metadata.cache" on-invalid="ignore" />
+        </service>
+
+        <service id="elao.api_resources_metadata.resource_metadata_factory"
+                 class="Elao\ApiResourcesMetadata\Resource\Factory\ResourceMetadataFactory"
+        >
+            <argument type="service" id="elao.api_resources_metadata.resource_index"/>
+            <argument type="collection">
+                <argument type="service" id="elao.api_resources_metadata.yaml_file_loader" on-invalid="ignore" />
+                <argument type="service" id="elao.api_resources_metadata.property_info_loader" on-invalid="ignore" />
+            </argument>
+            <argument type="service" id="elao.api_resources_metadata.cache" on-invalid="ignore" />
+        </service>
+
+        <service id="elao.api_resources_metadata.array_locator"
+                 class="Elao\ApiResourcesMetadata\Resource\Locator\ArrayLocator"
+                 public="false"
+        >
+            <argument type="collection" key="string" /> <!-- Resources short name / classes mapping -->
+        </service>
+    </services>
+</container>

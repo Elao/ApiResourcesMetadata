@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+        http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="elao.api_resources_metadata.nelmio_api_doc.parser"
+                 class="Elao\ApiResourcesMetadata\Bridge\Nelmio\ApiDoc\Parser\ApiResourceMetadataParser"
+                 public="false"
+        >
+            <argument type="service" id="elao.api_resources_metadata.resource_index" />
+            <argument type="service" id="elao.api_resources_metadata.resource_metadata_factory" />
+            <tag name="nelmio_api_doc.extractor.parser" priority="-20"/>
+        </service>
+
+        <service id="elao.api_resources_metadata.nelmio_api_doc.extractor"
+                 class="Elao\ApiResourcesMetadata\Bridge\Nelmio\ApiDoc\Extractor\ApiDocExtractor"
+                 decorates="nelmio_api_doc.extractor.api_doc_extractor"
+        >
+            <argument type="service" id="elao.api_resources_metadata.nelmio_api_doc.extractor.inner" />
+            <argument type="service" id="elao.api_resources_metadata.resource_index" />
+        </service>
+
+        <service id="elao.api_resources_metadata.nelmio_api_doc.swagger_formatter"
+                 class="Elao\ApiResourcesMetadata\Bridge\Nelmio\ApiDoc\Swagger\SwaggerFormatter"
+                 decorates="nelmio_api_doc.formatter.swagger_formatter"
+        >
+            <argument type="service" id="elao.api_resources_metadata.nelmio_api_doc.swagger_formatter.inner" />
+            <argument type="string">%nelmio_api_doc.swagger.model_naming_strategy%</argument>
+            <argument type="service" id="elao.api_resources_metadata.resource_index" />
+            <argument type="service" id="elao.api_resources_metadata.resource_metadata_factory" />
+        </service>
+    </services>
+</container>

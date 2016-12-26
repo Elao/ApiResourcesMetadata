@@ -1,0 +1,2 @@
+resources:
+    Elao.Newsfeed.News: { description: "A single news from a newsfeed" }

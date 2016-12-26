@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+        http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="elao.api_resources_metadata.property_info_loader" class="Elao\ApiResourcesMetadata\Resource\Loader\PropertyInfoLoader" public="false">
+            <argument type="service" /> <!-- PropertyInfoExtractor. Default: elao.api_resources_metadata.property_info -->
+        </service>
+
+        <service id="elao.api_resources_metadata.property_info.phpdoc_extractor" class="Symfony\Component\PropertyInfo\Extractor\PhpDocExtractor" public="false" />
+
+        <service id="elao.api_resources_metadata.property_info.reflection_extractor" class="Symfony\Component\PropertyInfo\Extractor\ReflectionExtractor" public="false" />
+
+        <service id="elao.api_resources_metadata.property_info" class="Symfony\Component\PropertyInfo\PropertyInfoExtractor" public="false">
+            <!-- List extractors -->
+            <argument type="collection">
+                <argument type="service" id="elao.api_resources_metadata.property_info.reflection_extractor" />
+            </argument>
+            <!-- Type extractors -->
+            <argument type="collection">
+                <argument type="service" id="elao.api_resources_metadata.property_info.phpdoc_extractor" />
+                <argument type="service" id="elao.api_resources_metadata.property_info.reflection_extractor" />
+            </argument>
+            <!-- Description extractors -->
+            <argument type="collection">
+                <argument type="service" id="elao.api_resources_metadata.property_info.phpdoc_extractor" />
+            </argument>
+            <!-- Access extractors -->
+            <argument type="collection">
+                <argument type="service" id="elao.api_resources_metadata.property_info.reflection_extractor" />
+            </argument>
+        </service>
+    </services>
+</container>

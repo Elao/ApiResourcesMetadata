@@ -1,0 +1,4 @@
+api_newsfeed_get:
+    path: '/api/newsfeed'
+    methods: [GET]
+    defaults: { _controller: 'TestBundle:NewsfeedResource:get' }

@@ -1,0 +1,11 @@
+resources:
+    Elao.Newsfeed: Elao\ApiResourcesMetadata\Tests\Fixtures\Resource\NewsfeedResource
+    Elao.Newsfeed.News:
+        class: Elao\ApiResourcesMetadata\Tests\Fixtures\Resource\NewsResource
+        description: "A single news from a newsfeed"
+        attributes:
+            createdAt:
+                type: string
+                originalType: \DateTime
+                description: The news creation date formatted to ISO 8601
+    Elao.ArticleReference: Elao\ApiResourcesMetadata\Tests\Fixtures\Resource\ArticleReferenceResource

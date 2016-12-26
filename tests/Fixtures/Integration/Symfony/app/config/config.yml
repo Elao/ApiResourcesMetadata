@@ -1,0 +1,29 @@
+framework:
+    secret:                           'elao'
+    form:                             false
+    router:
+        resource:                     '%kernel.root_dir%/config/routing.yml'
+        strict_requirements:          '%kernel.debug%'
+    test:                              ~
+    session:                          false
+    templating:
+        engines:                      ['twig']
+    assets: false
+
+nelmio_api_doc:
+    name: "Test API Documentation"
+    sandbox:
+        enabled: false
+    swagger:
+        model_naming_strategy:  dot_notation
+        api_base_path:        /api
+        swagger_version:      '1.2'
+        api_version:          '0.1'
+        info:
+            title:                "Test API Documentation"
+            description:          "Test API Documentation"
+
+elao_api_resources_metadata:
+    nelmio_api_doc: true
+    loaders:
+        yaml: { path: '%kernel.root_dir%/../../../res/resources.yml' }

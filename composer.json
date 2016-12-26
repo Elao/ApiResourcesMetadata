@@ -1,0 +1,53 @@
+{
+    "name": "elao/api-resources-metadata",
+    "description": "Extract API resource objects' metadata using different providers",
+    "license": "MIT",
+    "type": "library",
+    "keywords": ["api", "metadata", "resources", "symfony"],
+    "authors": [
+        {
+            "name": "Elao",
+            "homepage": "http://www.elao.com"
+        },
+        {
+            "name": "Maxime Steinhausser",
+            "email": "maxime.steinhausser@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Elao\\ApiResourcesMetadata\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Elao\\ApiResourcesMetadata\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=7.0"
+    },
+    "require-dev": {
+        "doctrine/annotations": "^1.3",
+        "friendsofphp/php-cs-fixer": "^2.0",
+        "nelmio/api-doc-bundle": "^2.13",
+        "phpdocumentor/reflection-docblock": "^3.0",
+        "phpunit/phpunit": "^5.6",
+        "psr/cache": "^1.0",
+        "symfony/cache": "^3.1",
+        "symfony/framework-bundle": "^3.1",
+        "symfony/phpunit-bridge": "^3.1",
+        "symfony/property-info": "^3.1",
+        "symfony/templating": "^3.1",
+        "symfony/var-dumper": "^3.1",
+        "symfony/yaml": "^3.1"
+    },
+    "suggest": {
+        "psr/cache-implementation": "To cache resources and metadata"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
