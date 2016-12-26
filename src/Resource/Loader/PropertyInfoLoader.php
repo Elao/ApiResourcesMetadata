@@ -46,7 +46,7 @@ class PropertyInfoLoader implements LoaderInterface
 
         $resourceMetadata->getDescription() ?: $resourceMetadata->setDescription($this->getClassDocBlock($class));
 
-        foreach ($this->extractor->getProperties($class) as $name) {
+        foreach ((array) $this->extractor->getProperties($class) as $name) {
             $attributeMetadata = $resourceMetadata->getAttribute($name) ?? new ResourceAttributeMetadata($name);
 
             if (!empty($description = $this->extractor->getLongDescription($class, $name))) {
