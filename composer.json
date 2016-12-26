@@ -43,7 +43,10 @@
         "symfony/yaml": "^3.1"
     },
     "suggest": {
-        "psr/cache-implementation": "To cache resources and metadata"
+        "symfony/yaml": "To use the YamlFileLoader",
+        "symfony/property-info": "To use the PropertyInfoLoader",
+        "psr/cache-implementation": "To cache resources and metadata",
+        "nelmio/api-doc-bundle": "To document your API using the NelmioApiDoc bundle integration"
     },
     "extra": {
         "branch-alias": {
