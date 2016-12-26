@@ -41,6 +41,10 @@ class ModelRegistry extends NelmioModelRegistry
             return;
         }
 
+        if (!class_exists($className) && $this->resourceIndex->has($className)) {
+            $className = $this->resourceIndex->getResourceClass($className);
+        }
+
         $id = parent::register($className, $parameters, $description);
 
         $matches = [];

@@ -36,6 +36,10 @@ class ApiDocExtractor extends NelmioApiDocExtractor
 
     protected function generateHumanReadableType($actualType, $subType)
     {
+        if (!class_exists($subType) && $this->resourceIndex->has($subType)) {
+            $subType = $this->resourceIndex->getResourceClass($subType);
+        }
+
         if (null === $shortName = $this->getShortName($subType)) {
             return $this->innerApiDocExtractor->generateHumanReadableType($actualType, $subType);
         }

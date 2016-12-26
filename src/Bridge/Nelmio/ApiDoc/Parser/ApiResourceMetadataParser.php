@@ -70,6 +70,7 @@ class ApiResourceMetadataParser implements ParserInterface
                 $attributeData['dataType'] = null; // ApiDocExtractor will generate it
 
                 if ($this->supports(['class' => $subType])) {
+                    $attributeData['subType'] = $this->resourceIndex->getShortName($subType);
                     $attributeData['children'] = $this->doParse($subType);
                 }
             }

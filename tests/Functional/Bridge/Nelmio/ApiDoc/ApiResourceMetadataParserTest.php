@@ -118,7 +118,7 @@ array:6 [
     "required" => true
     "description" => "A list of related article or sources"
     "readonly" => null
-    "subType" => "Elao\ApiResourcesMetadata\Tests\Fixtures\Resource\ArticleReferenceResource"
+    "subType" => "Elao.ArticleReference"
     "children" => array:3 [
       "title" => array:5 [
         "dataType" => "string"
@@ -154,7 +154,7 @@ array:2 [
     "required" => true
     "description" => "News for the localized feed"
     "readonly" => null
-    "subType" => "Elao\ApiResourcesMetadata\Tests\Fixtures\Resource\NewsResource"
+    "subType" => "Elao.Newsfeed.News"
     "children" => array:6 [
       "createdAt" => array:5 [
         "dataType" => "string"
@@ -197,7 +197,7 @@ array:2 [
         "required" => true
         "description" => "A list of related article or sources"
         "readonly" => null
-        "subType" => "Elao\ApiResourcesMetadata\Tests\Fixtures\Resource\ArticleReferenceResource"
+        "subType" => "Elao.ArticleReference"
         "children" => array:3 [
           "title" => array:5 [
             "dataType" => "string"

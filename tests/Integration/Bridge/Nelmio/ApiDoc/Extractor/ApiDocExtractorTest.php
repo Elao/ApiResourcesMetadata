@@ -49,12 +49,12 @@ array:1 [
       -uri: "/api/newsfeed"
       -response: array:2 [
         "news" => array:7 [
-          "dataType" => "array of objects (NewsResource)"
+          "dataType" => "array of objects (Elao.Newsfeed.News)"
           "actualType" => "collection"
           "required" => true
           "description" => "News for the localized feed"
           "readonly" => null
-          "subType" => "Elao\ApiResourcesMetadata\Tests\Fixtures\Resource\NewsResource"
+          "subType" => "Elao.Newsfeed.News"
           "children" => array:6 [
             "createdAt" => array:5 [
               "dataType" => "string"
@@ -92,12 +92,12 @@ array:1 [
               "readonly" => null
             ]
             "references" => array:7 [
-              "dataType" => "array of objects (ArticleReferenceResource)"
+              "dataType" => "array of objects (Elao.ArticleReference)"
               "actualType" => "collection"
               "required" => true
               "description" => "A list of related article or sources"
               "readonly" => null
-              "subType" => "Elao\ApiResourcesMetadata\Tests\Fixtures\Resource\ArticleReferenceResource"
+              "subType" => "Elao.ArticleReference"
               "children" => array:3 [
                 "title" => array:5 [
                   "dataType" => "string"
@@ -182,12 +182,12 @@ array:1 [
           ]
           "model" => array:2 [
             "news" => array:7 [
-              "dataType" => "array of objects (NewsResource)"
+              "dataType" => "array of objects (Elao.Newsfeed.News)"
               "actualType" => "collection"
               "required" => true
               "description" => "News for the localized feed"
               "readonly" => null
-              "subType" => "Elao\ApiResourcesMetadata\Tests\Fixtures\Resource\NewsResource"
+              "subType" => "Elao.Newsfeed.News"
               "children" => array:6 [
                 "createdAt" => array:5 [
                   "dataType" => "string"
@@ -225,12 +225,12 @@ array:1 [
                   "readonly" => null
                 ]
                 "references" => array:7 [
-                  "dataType" => "array of objects (ArticleReferenceResource)"
+                  "dataType" => "array of objects (Elao.ArticleReference)"
                   "actualType" => "collection"
                   "required" => true
                   "description" => "A list of related article or sources"
                   "readonly" => null
-                  "subType" => "Elao\ApiResourcesMetadata\Tests\Fixtures\Resource\ArticleReferenceResource"
+                  "subType" => "Elao.ArticleReference"
                   "children" => array:3 [
                     "title" => array:5 [
                       "dataType" => "string"
