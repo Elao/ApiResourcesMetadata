@@ -13,6 +13,7 @@ namespace Elao\ApiResourcesMetadata\Bridge\Symfony\Bundle\DependencyInjection;
 use Nelmio\ApiDocBundle\NelmioApiDocBundle;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
+use Symfony\Component\PropertyInfo;
 
 class Configuration implements ConfigurationInterface
 {
@@ -41,7 +42,7 @@ class Configuration implements ConfigurationInterface
                             ->end()
                         ->end()
                         ->arrayNode('property_info')
-                            ->canBeDisabled()
+                            ->{class_exists(PropertyInfo\Type::class) ? 'canBeDisabled' : 'canBeEnabled'}()
                             ->children()
                                 ->scalarNode('service')
                                     ->defaultValue('elao.api_resources_metadata.property_info')

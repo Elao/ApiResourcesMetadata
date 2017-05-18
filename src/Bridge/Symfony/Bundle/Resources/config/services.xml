@@ -30,7 +30,7 @@
                  class="Elao\ApiResourcesMetadata\Resource\Locator\ArrayLocator"
                  public="false"
         >
-            <argument type="collection" key="string" /> <!-- Resources short name / classes mapping -->
+            <argument type="collection" /> <!-- Resources short name / classes mapping -->
         </service>
     </services>
 </container>
