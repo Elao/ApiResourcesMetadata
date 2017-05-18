@@ -6,7 +6,7 @@
 
     <services>
         <service id="elao.api_resources_metadata.property_info_loader" class="Elao\ApiResourcesMetadata\Resource\Loader\PropertyInfoLoader" public="false">
-            <argument type="service" /> <!-- PropertyInfoExtractor. Default: elao.api_resources_metadata.property_info -->
+            <argument /> <!-- PropertyInfoExtractor. Default: elao.api_resources_metadata.property_info -->
         </service>
 
         <service id="elao.api_resources_metadata.property_info.phpdoc_extractor" class="Symfony\Component\PropertyInfo\Extractor\PhpDocExtractor" public="false" />
