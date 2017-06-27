@@ -60,7 +60,7 @@ class NewsResource
         string $title,
         string $content,
         \DateTime $createdAt,
-        sting $image = null,
+        string $image = null,
         bool $urgent = false,
         array $references = []
     ) {
