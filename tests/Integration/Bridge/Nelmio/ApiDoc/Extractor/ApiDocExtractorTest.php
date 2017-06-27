@@ -55,12 +55,19 @@ array:1 [
           "description" => "News for the localized feed"
           "readonly" => null
           "subType" => "Elao.Newsfeed.News"
-          "children" => array:6 [
+          "children" => array:7 [
             "createdAt" => array:5 [
               "dataType" => "string"
               "actualType" => "datetime"
               "required" => true
               "description" => "The news creation date formatted to ISO 8601"
+              "readonly" => null
+            ]
+            "image" => array:5 [
+              "dataType" => "file"
+              "actualType" => "file"
+              "required" => false
+              "description" => ""
               "readonly" => null
             ]
             "identifier" => array:5 [
@@ -188,12 +195,19 @@ array:1 [
               "description" => "News for the localized feed"
               "readonly" => null
               "subType" => "Elao.Newsfeed.News"
-              "children" => array:6 [
+              "children" => array:7 [
                 "createdAt" => array:5 [
                   "dataType" => "string"
                   "actualType" => "datetime"
                   "required" => true
                   "description" => "The news creation date formatted to ISO 8601"
+                  "readonly" => null
+                ]
+                "image" => array:5 [
+                  "dataType" => "file"
+                  "actualType" => "file"
+                  "required" => false
+                  "description" => ""
                   "readonly" => null
                 ]
                 "identifier" => array:5 [

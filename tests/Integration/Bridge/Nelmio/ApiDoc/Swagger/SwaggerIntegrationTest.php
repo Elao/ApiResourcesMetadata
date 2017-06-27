@@ -111,6 +111,11 @@ class SwaggerIntegrationTest extends KernelTestCase
                     "type":"string",
                     "description":"The news content"
                 },
+                "image":{  
+                    "type":"string",
+                    "description":"file",
+                    "format":"byte"
+                },
                 "urgent":{  
                     "type":"boolean",
                     "description":"Is this news urgent or not"
