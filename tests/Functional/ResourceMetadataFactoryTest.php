@@ -138,13 +138,20 @@ Elao\ApiResourcesMetadata\Resource\ResourceMetadata {
   +class: "Elao\ApiResourcesMetadata\Tests\Fixtures\Resource\NewsResource"
   +shortName: "Elao.Newsfeed.News"
   +description: "A single news from a newsfeed"
-  +attributes: array:6 [
+  +attributes: array:7 [
     "createdAt" => Elao\ApiResourcesMetadata\Attribute\ResourceAttributeMetadata {
       +name: "createdAt"
       +description: "The news creation date formatted to ISO 8601"
       +required: true
       +type: "string"
       +originalType: "\DateTime"
+    }
+    "image" => Elao\ApiResourcesMetadata\Attribute\ResourceAttributeMetadata {
+      +name: "image"
+      +description: null
+      +required: false
+      +type: "file"
+      +originalType: "string"
     }
     "identifier" => Elao\ApiResourcesMetadata\Attribute\ResourceAttributeMetadata {
       +name: "identifier"

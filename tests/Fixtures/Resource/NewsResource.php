@@ -38,6 +38,9 @@ class NewsResource
     /** @var \DateTime */
     private $createdAt;
 
+    /** @var string|null */
+    private $image;
+
     /**
      * Is this news urgent or not
      *
@@ -57,6 +60,7 @@ class NewsResource
         string $title,
         string $content,
         \DateTime $createdAt,
+        string $image = null,
         bool $urgent = false,
         array $references = []
     ) {
@@ -64,6 +68,7 @@ class NewsResource
         $this->title = $title;
         $this->content = $content;
         $this->createdAt = $createdAt;
+        $this->image = $image;
         $this->urgent = $urgent;
         $this->references = $references;
     }
@@ -86,6 +91,11 @@ class NewsResource
     public function getCreatedAt(): \DateTime
     {
         return $this->createdAt;
+    }
+
+    public function getImage(): string
+    {
+        return $this->image;
     }
 
     public function isUrgent(): bool

@@ -8,4 +8,6 @@ resources:
                 type: string
                 originalType: \DateTime
                 description: The news creation date formatted to ISO 8601
+            image:
+                type: file
     Elao.ArticleReference: Elao\ApiResourcesMetadata\Tests\Fixtures\Resource\ArticleReferenceResource
