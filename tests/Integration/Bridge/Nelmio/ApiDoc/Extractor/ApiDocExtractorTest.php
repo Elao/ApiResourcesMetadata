@@ -55,12 +55,26 @@ array:1 [
           "description" => "News for the localized feed"
           "readonly" => null
           "subType" => "Elao.Newsfeed.News"
-          "children" => array:7 [
+          "children" => array:9 [
             "createdAt" => array:5 [
               "dataType" => "string"
               "actualType" => "datetime"
               "required" => true
               "description" => "The news creation date formatted to ISO 8601"
+              "readonly" => null
+            ]
+            "updatedAt" => array:5 [
+              "dataType" => "string"
+              "actualType" => "datetime"
+              "required" => true
+              "description" => "The news modification date formatted to ISO 8601"
+              "readonly" => null
+            ]
+            "deletedAt" => array:5 [
+              "dataType" => "string"
+              "actualType" => "datetime"
+              "required" => true
+              "description" => "The news deletion date formatted to ISO 8601"
               "readonly" => null
             ]
             "image" => array:5 [
@@ -195,12 +209,26 @@ array:1 [
               "description" => "News for the localized feed"
               "readonly" => null
               "subType" => "Elao.Newsfeed.News"
-              "children" => array:7 [
+              "children" => array:9 [
                 "createdAt" => array:5 [
                   "dataType" => "string"
                   "actualType" => "datetime"
                   "required" => true
                   "description" => "The news creation date formatted to ISO 8601"
+                  "readonly" => null
+                ]
+                "updatedAt" => array:5 [
+                  "dataType" => "string"
+                  "actualType" => "datetime"
+                  "required" => true
+                  "description" => "The news modification date formatted to ISO 8601"
+                  "readonly" => null
+                ]
+                "deletedAt" => array:5 [
+                  "dataType" => "string"
+                  "actualType" => "datetime"
+                  "required" => true
+                  "description" => "The news deletion date formatted to ISO 8601"
                   "readonly" => null
                 ]
                 "image" => array:5 [

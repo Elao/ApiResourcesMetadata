@@ -138,13 +138,27 @@ Elao\ApiResourcesMetadata\Resource\ResourceMetadata {
   +class: "Elao\ApiResourcesMetadata\Tests\Fixtures\Resource\NewsResource"
   +shortName: "Elao.Newsfeed.News"
   +description: "A single news from a newsfeed"
-  +attributes: array:7 [
+  +attributes: array:9 [
     "createdAt" => Elao\ApiResourcesMetadata\Attribute\ResourceAttributeMetadata {
       +name: "createdAt"
       +description: "The news creation date formatted to ISO 8601"
       +required: true
       +type: "string"
+      +originalType: "\DateTimeImmutable"
+    }
+    "updatedAt" => Elao\ApiResourcesMetadata\Attribute\ResourceAttributeMetadata {
+      +name: "updatedAt"
+      +description: "The news modification date formatted to ISO 8601"
+      +required: true
+      +type: "string"
       +originalType: "\DateTime"
+    }
+    "deletedAt" => Elao\ApiResourcesMetadata\Attribute\ResourceAttributeMetadata {
+      +name: "deletedAt"
+      +description: "The news deletion date formatted to ISO 8601"
+      +required: true
+      +type: "string"
+      +originalType: "\DateTimeInterface"
     }
     "image" => Elao\ApiResourcesMetadata\Attribute\ResourceAttributeMetadata {
       +name: "image"
