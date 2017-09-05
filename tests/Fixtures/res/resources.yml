@@ -6,8 +6,16 @@ resources:
         attributes:
             createdAt:
                 type: string
-                originalType: \DateTime
+                originalType: \DateTimeImmutable
                 description: The news creation date formatted to ISO 8601
+            updatedAt:
+                type: string
+                originalType: \DateTime
+                description: The news modification date formatted to ISO 8601
+            deletedAt:
+                type: string
+                originalType: \DateTimeInterface
+                description: The news deletion date formatted to ISO 8601
             image:
                 type: file
     Elao.ArticleReference: Elao\ApiResourcesMetadata\Tests\Fixtures\Resource\ArticleReferenceResource

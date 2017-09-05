@@ -98,6 +98,16 @@ class SwaggerIntegrationTest extends KernelTestCase
                     "description":"The news creation date formatted to ISO 8601",
                     "format":"date-time"
                 },
+                "updatedAt":{  
+                    "type":"string",
+                    "description":"The news modification date formatted to ISO 8601",
+                    "format":"date-time"
+                },
+                "deletedAt":{  
+                    "type":"string",
+                    "description":"The news deletion date formatted to ISO 8601",
+                    "format":"date-time"
+                },
                 "identifier":{  
                     "type":"integer",
                     "description":"Unique identifier",
@@ -130,6 +140,8 @@ class SwaggerIntegrationTest extends KernelTestCase
             },
             "required":[  
                 "createdAt",
+                "updatedAt",
+                "deletedAt",
                 "identifier",
                 "title",
                 "content",

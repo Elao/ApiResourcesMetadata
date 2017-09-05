@@ -83,7 +83,9 @@ class ApiResourceMetadataParser implements ParserInterface
 
     private function resolveActualType(ResourceAttributeMetadata $attributeMetadata)
     {
-        if (\DateTime::class === ltrim($attributeMetadata->getOriginalType(), '\\')) {
+        $originalTypeClass = ltrim($attributeMetadata->getOriginalType(), '\\');
+
+        if (in_array($originalTypeClass, [\DateTime::class, \DateTimeImmutable::class, \DateTimeInterface::class], true)) {
             return [DataTypes::DATETIME, null];
         }
 

@@ -35,8 +35,14 @@ class NewsResource
      */
     private $content;
 
-    /** @var \DateTime */
+    /** @var \DateTimeImmutable */
     private $createdAt;
+
+    /** @var \DateTime */
+    private $updatedAt;
+
+    /** @var \DateTimeInterface */
+    private $deletedAt;
 
     /** @var string|null */
     private $image;
@@ -59,7 +65,9 @@ class NewsResource
         int $identifier,
         string $title,
         string $content,
-        \DateTime $createdAt,
+        \DateTimeImmutable $createdAt,
+        \DateTime $updatedAt,
+        \DateTimeInterface $deletedAt,
         string $image = null,
         bool $urgent = false,
         array $references = []
@@ -68,6 +76,8 @@ class NewsResource
         $this->title = $title;
         $this->content = $content;
         $this->createdAt = $createdAt;
+        $this->updatedAt = $updatedAt;
+        $this->deletedAt = $deletedAt;
         $this->image = $image;
         $this->urgent = $urgent;
         $this->references = $references;
@@ -88,9 +98,19 @@ class NewsResource
         return $this->content;
     }
 
-    public function getCreatedAt(): \DateTime
+    public function getCreatedAt(): \DateTimeImmutable
     {
         return $this->createdAt;
+    }
+
+    public function getUpdatedAt(): \DateTime
+    {
+        return $this->updatedAt;
+    }
+
+    public function getDeletedAt(): \DateTimeInterface
+    {
+        return $this->deletedAt;
     }
 
     public function getImage(): string
