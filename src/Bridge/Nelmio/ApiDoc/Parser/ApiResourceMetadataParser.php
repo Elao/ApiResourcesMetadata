@@ -86,7 +86,7 @@ class ApiResourceMetadataParser implements ParserInterface
         $originalTypeClass = ltrim($attributeMetadata->getOriginalType(), '\\');
 
         if (in_array($originalTypeClass, [\DateTime::class, \DateTimeImmutable::class, \DateTimeInterface::class], true)) {
-            return [DataTypes::DATETIME, null];
+            return [DataTypes::DATETIME, DataTypes::DATETIME];
         }
 
         $type = $attributeMetadata->getType();

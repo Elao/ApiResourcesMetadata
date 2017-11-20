@@ -77,26 +77,29 @@ class ApiResourceMetadataParserTest extends \PHPUnit_Framework_TestCase
 
     const NEWS_RESOURCE_DUMP = <<<'DUMP'
 array:9 [
-  "createdAt" => array:5 [
-    "dataType" => "string"
+  "createdAt" => array:6 [
+    "dataType" => null
     "actualType" => "datetime"
     "required" => true
     "description" => "The news creation date formatted to ISO 8601"
     "readonly" => null
+    "subType" => "datetime"
   ]
-  "updatedAt" => array:5 [
-    "dataType" => "string"
+  "updatedAt" => array:6 [
+    "dataType" => null
     "actualType" => "datetime"
     "required" => true
     "description" => "The news modification date formatted to ISO 8601"
     "readonly" => null
+    "subType" => "datetime"
   ]
-  "deletedAt" => array:5 [
-    "dataType" => "string"
+  "deletedAt" => array:6 [
+    "dataType" => null
     "actualType" => "datetime"
     "required" => true
     "description" => "The news deletion date formatted to ISO 8601"
     "readonly" => null
+    "subType" => "datetime"
   ]
   "image" => array:5 [
     "dataType" => "file"
@@ -177,26 +180,29 @@ array:2 [
     "readonly" => null
     "subType" => "Elao.Newsfeed.News"
     "children" => array:9 [
-      "createdAt" => array:5 [
-        "dataType" => "string"
+      "createdAt" => array:6 [
+        "dataType" => null
         "actualType" => "datetime"
         "required" => true
         "description" => "The news creation date formatted to ISO 8601"
         "readonly" => null
+        "subType" => "datetime"
       ]
-      "updatedAt" => array:5 [
-        "dataType" => "string"
+      "updatedAt" => array:6 [
+        "dataType" => null
         "actualType" => "datetime"
         "required" => true
         "description" => "The news modification date formatted to ISO 8601"
         "readonly" => null
+        "subType" => "datetime"
       ]
-      "deletedAt" => array:5 [
-        "dataType" => "string"
+      "deletedAt" => array:6 [
+        "dataType" => null
         "actualType" => "datetime"
         "required" => true
         "description" => "The news deletion date formatted to ISO 8601"
         "readonly" => null
+        "subType" => "datetime"
       ]
       "image" => array:5 [
         "dataType" => "file"
